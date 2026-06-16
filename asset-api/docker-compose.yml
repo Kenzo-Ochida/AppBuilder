@@ -1,0 +1,45 @@
+# version: '3.8'
+
+services:
+  asset-api:
+    build: .    
+    image: asset-api:0.0.2
+    restart: unless-stopped 
+    ports:                 
+      - "8090:8090"  
+    depends_on:
+      - assetApidb
+    networks:
+      - shared-network
+
+  assetApidb:
+    image: mariadb:11.4
+    container_name: assetApi-db
+    restart: unless-stopped
+    command:
+      - --transaction-isolation=READ-COMMITTED
+      - --log-bin=binlog
+      - --binlog-format=ROW
+    volumes:
+      - assetApi-db:/var/lib/mysql
+      - ./docker/asset.sql:/docker-entrypoint-initdb.d/asset.sql
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: lfs123!@
+      MYSQL_PASSWORD: lfs123!@
+      MYSQL_DATABASE: asset_api
+      MYSQL_USER: asset_api
+        #  http_proxy:  http://mackcloud:cloud2019@172.16.50.1:8080
+        #  https_proxy: http://mackcloud:cloud2019@172.16.50.1:8080
+    networks:
+      - shared-network
+
+volumes:
+  assetApi-db:
+    name: assetApi-db
+
+networks:
+  shared-network:
+    name: shared-network
+    driver: bridge # ALTERAÇÃO AQUI: removido 'external: true'

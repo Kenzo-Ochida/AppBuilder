@@ -1,0 +1,45 @@
+.login-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Camada da imagem translúcida */
+.imagem-fundo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* Garante que o conteúdo fique sobre a imagem */
+.conteudo {
+  position: relative;
+  z-index: 1;
+}
+
+.input-field {
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.partner-logos:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .login-box {
+    width: 90% !important;
+  }
+}
+

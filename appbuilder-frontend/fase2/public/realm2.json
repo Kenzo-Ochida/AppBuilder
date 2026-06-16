@@ -1,0 +1,22 @@
+{
+  "id": "meureino",
+  "realm": "meureino",
+  "displayName": "Meu Reino",
+  "enabled": true,
+  "loginWithEmailAllowed": true,
+  "resetPasswordAllowed": true,
+  "editUsernameAllowed": true,
+  "internationalizationEnabled": true,
+  "supportedLocales": ["pt-BR", "en"],
+  "loginTheme": "keycloak.v2",
+
+  "smtpServer": {
+    "from": "fci.labmackleaps@mackenzie.br",
+    "fromDisplayName": "Keycloak",
+    "host": "172.16.50.161",
+    "port": "25",
+    "auth": "false",
+    "ssl": "false",
+    "starttls": "false"
+  }
+}

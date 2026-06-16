@@ -1,0 +1,18 @@
+[
+    {
+        "id": "realm1",
+        "displayName": "Realm1",
+        "enabled": true
+    },
+    {
+        "id": "realm2",
+        "displayName": "Realm2",
+        "enabled": true
+    },
+    {
+        "id": "realm3",
+        "displayName": "Realm3",
+        "enabled": false
+    }
+  
+]

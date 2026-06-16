@@ -1,0 +1,21 @@
+{
+  "name": "testRealm4",
+  "status": "created",
+  "domain": "mackleaps",
+  "attributesLabel": {
+    "i18nNameLabel": "testRealm4",
+    "i18nDateCreatedLabel": "2025-04-29T15:00:00Z",
+    "i18nLastUpdatedLabel": "2025-04-29T15:30:00Z"
+  },
+  "attributesType": {},
+  "icon": "",
+  "icon64": "",
+  "i18nCreateUserLabel": null,
+  "i18nDateCreatedLabel": null,
+  "i18nDescriptionLabel": null,
+  "i18nIdLabel": null,
+  "i18nLastUpdatedLabel": null,
+  "i18nNameLabel": null,
+  "i18nStatusLabel": null,
+  "i18nUpdateUserLabel": null
+}
